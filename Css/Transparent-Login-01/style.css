@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-light-hsl: 200, 100%, 91%;
+  --primary-hsl: 200, 100%, 50%;
+  --primary-dark-hsl: 200, 100%, 6%;
+  --success-hsl: 100, 60%, 50%;
+  --error-hsl: 0, 60%, 50%;
+}
+section.wrapper {
+  background: url("https://cdn.pixabay.com/photo/2024/07/03/08/05/hot-air-balloon-8869138_1280.jpg")
+    no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  min-width: 200px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-conteiner {
+  /* height: 200px; */
+  width: 40%;
+  padding: 30px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.543);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: hsla(var(--primary-dark-hsl), 0.7);
+  /* background-color: hsla(var(--primary-dark-hsl), 0.7); */
+  border-radius: 10px;
+}
+.form-conteiner .title {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: hsl(var(--primary-light-hsl), 0.3);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.input-group.success input {
+  box-shadow: 0 0 0 1px hsl(var(--success-hsl));
+}
+
+.input-group.error input {
+  box-shadow: 0 0 0 1px hsl(var(--error-hsl));
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
+}
+.input-group.error .msg {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+
+  color: hsl(var(--error-hsl));
+}
+
+.input-group.success .msg {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: hsl(var(--success-hsl));
+}
+.input-group.success .msg,
+.input-group.error .msg {
+  display: block;
+}
+.input-group label {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.btn {
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: white;
+  background-color: hsl(var(--primary-hsl), 0.25);
+  border: 1px solid hsl(var(--primary-hsl));
+  border-radius: 0.25em;
+  outline: none;
+  cursor: pointer;
+}
